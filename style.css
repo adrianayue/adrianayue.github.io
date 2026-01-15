@@ -1,0 +1,219 @@
+/* GENERAL */
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bg-color);
+    transition: background-color 2s ease;
+    color: var(--text-color);
+    transition: none;
+}
+
+/* Transició color text al carregar la pàgina */
+body.ready {
+    transition: color 2s ease;
+}
+
+/* Classe per mantenir estàtica la web */
+.no-scroll {
+    min-height: 100vh;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
+
+
+
+
+/* VARIABLES COLORS */
+:root {
+  --bg-color: ; /* variable que canvia el color del fons en funcio del js */
+  --text-color: ; /* variable que canvia el color del text en funcio del js */
+  --sticker-stroke-color: ;
+}
+
+
+
+
+
+/* HOME */
+.home-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.home-container a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.home-container a:hover {
+    opacity: 0.5;
+}
+
+.home-top {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 48px 64px 0 64px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 72px;
+    box-sizing: border-box;
+}
+
+.home-top p {
+    margin: 0px;
+}
+
+.home-header{
+    display: flex;
+    width: 100%;
+    min-height: 19px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-container{
+    display: flex;
+    align-items:flex-start;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    gap: 4px;
+}
+
+#time{
+    font-weight: 350;
+}
+
+.home-text-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-text-intro{
+    width: 50vw;
+    font-family: "Sentient";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+}
+
+.home-text-intro p {
+    margin-bottom: 0.5em;
+}
+
+.home-text-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.home-details-container {
+    display: flex;
+    width: 20vw;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.home-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.home-details-title {
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; 
+}
+
+.home-details-nav-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.home-details-text {
+    font-family: "Sentient";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+a.home-details-link {
+    font-family: "Sentient";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-details-link p:hover{
+    font-style: italic;
+}
+
+
+.home-bottom {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/* TYPE */
+@font-face {
+    font-family: "Sentient";
+    src: url("/assets/Sentient-Variable.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Sentient-Italic";
+    src: url("/assets/Sentient-VariableItalic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Inter-Italic";
+    src: url("/assets/Inter-Italic-VariableFont_opsz\,wght.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/Inter-VariableFont_opsz\,wght.ttf") format('truetype');
+}
+
+
+.home-bottom p {
+    margin: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 372px;
+    line-height: 100%;
+}
