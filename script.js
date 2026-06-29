@@ -1,4 +1,5 @@
 // ===== Hora a temps real Barcelona =====
+
 function getBarcelonaParts() {
   const now = new Date();
   const options = {
@@ -32,6 +33,7 @@ function updateClock() {
 }
 
 // ===== Colors segons hores =====
+
 const THEMES = [
   { from: 0,  to: 6,  bg: '#4B362E', text: '#F3EBD5' },
   { from: 6,  to: 12, bg: '#F3EDE6', text: '#615A57' },

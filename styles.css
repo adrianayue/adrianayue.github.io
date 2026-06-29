@@ -4,38 +4,22 @@
 
 @font-face {
   font-family: 'Sentient Variable';
-  src: url('fonts/Sentient-Variable.woff2') format('woff2-variations'),
-    url('fonts/Sentient-Variable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+  src: url('assets/Sentient-Variable.ttf') format('truetype-variations');
 }
 
 @font-face {
   font-family: 'Sentient Variable Italic';
-  src: url('fonts/Sentient-VariableItalic.woff2') format('woff2-variations'),
-    url('fonts/Sentient-VariableItalic.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+  src: url('assets/Sentient-VariableItalic.ttf') format('truetype-variations');
 }
 
 @font-face {
   font-family: 'General Sans Variable';
-  src: url('fonts/GeneralSans-Variable.woff2') format('woff2-variations'),
-    url('fonts/GeneralSans-Variable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+  src: url('assets/GeneralSans-Variable.ttf') format('true-type-variations');
 }
 
 @font-face {
   font-family: 'General Sans Variable Italic';
-  src: url('fonts/GeneralSans-VariableItalic.woff2') format('woff2-variations'),
-    url('fonts/GeneralSans-VariableItalic.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+  src: url('assets/GeneralSans-VariableItalic.ttf') format('true-type-variations');
 }
 
 
