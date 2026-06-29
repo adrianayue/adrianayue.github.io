@@ -61,7 +61,7 @@ body {
   justify-content: space-between;
   background: var(--bg);
   color: var(--text);
-  font-family: 'General Sans Variable', Verdana, Geneva, sans-serif;
+  font-family: 'General Sans Variable';
   transition: background-color var(--transition-speed) ease,
     color var(--transition-speed) ease;
 }
@@ -107,7 +107,7 @@ header a:active {
 }
 
 div.logo a {
-  font-family: 'General Sans Variable', Verdana, Geneva, sans-serif;
+  font-family: 'General Sans Variable';
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
@@ -126,7 +126,7 @@ nav {
 }
 
 nav a {
-  font-family: 'Sentient Variable Italic', Georgia, serif;
+  font-family: 'Sentient Variable Italic';
   font-style: normal;
   font-size: 16px;
   font-weight: 200;
