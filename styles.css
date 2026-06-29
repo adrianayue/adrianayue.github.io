@@ -4,22 +4,22 @@
 
 @font-face {
   font-family: 'Sentient Variable';
-  src: url('assets/Sentient-Variable.ttf') format('true-type-variations');
+  src: url('assets/Sentient-Variable.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Sentient Variable Italic';
-  src: url('assets/Sentient-VariableItalic.ttf') format('true-type-variations');
+  src: url('assets/Sentient-VariableItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'General Sans Variable';
-  src: url('assets/GeneralSans-Variable.ttf') format('true-type-variations');
+  src: url('assets/GeneralSans-Variable.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'General Sans Variable Italic';
-  src: url('assets/GeneralSans-VariableItalic.ttf') format('true-type-variations');
+  src: url('assets/GeneralSans-VariableItalic.ttf') format('truetype');
 }
 
 
@@ -51,11 +51,12 @@
 
 html,
 body {
-  margin: 0;
+  margin: 0px;
   height: 100vh;
 }
 
 body {
+  padding: 0px 60px 0px 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,6 +67,13 @@ body {
     color var(--transition-speed) ease;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 0px 16px 0px 16px;
+  }
+  
+}
+
 
 
 /* =====================================================================
@@ -73,10 +81,10 @@ body {
    ===================================================================== */
 
 header {
+  padding: 40px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 60px 0 60px;
   font-size: 16px;
 }
 
@@ -106,7 +114,7 @@ header a:active {
   color: var(--text);
 }
 
-div.logo a {
+.logo {
   font-family: 'General Sans Variable';
   font-style: normal;
   font-size: 16px;
@@ -162,14 +170,48 @@ nav a {
   opacity: var(--op-strong);
 }
 
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none;
+  } 
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  header {
+    padding: 16px 0px 0px 0px;
+  }
+
+  header nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+
+
 /* =====================================================================
     5. LAYOUT COMPARTIT - MAIN
    ===================================================================== */
 
 main {
   height: 100%;
-  padding: 96px 60px 0 60px;
+  padding: 96px 0px 0px 0px;
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: 80px 0px 0px 0px;
+  }
+}
+
+
 
 /* =====================================================================
     6. LAYOUT COMPARTIT - FOOTER
@@ -180,22 +222,26 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 0 40px 0;
+  padding: 0px 0px 20px 0px;
   font-size: 12px;
   font-weight: 400;
   opacity: var(--op-soft);
 }
 
+@media (max-width: 768px) {
+  footer {
+    font-size: 10px;
+  }
+}
+
 
 
 /* =====================================================================
-    6. PÀGINA: INDEX
+    7. PÀGINA: INDEX
    ===================================================================== */
 
-
-
 main p {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.30;
   margin: 0 0 20px 0;
@@ -203,22 +249,12 @@ main p {
 }
 
 main p b {
-  font-weight: 500;
+  font-weight: 550;
 }
 
-
-@media (max-width: 900px) {
-  header {
-    padding: 30px 25px 0 25px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  main {
-    padding: 60px 25px 0 25px;
-  }
-
+@media (max-width: 768px) {
   main p {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.30;
   }
 }

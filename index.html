@@ -12,15 +12,18 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="#index">Adriana Yue</a>
+        <div class="hide-mobile">
+            <a class="logo" href="/">Adriana Yue</a>
         </div>
+
         <nav>
-            <a href="#about">about</a>
-            <span class="nav-sep">·</span>
-            <a href="#work">work</a>
+            <a href="/about/">about</a>
+            <span class="hide-mobile nav-sep">·</span>
+            <a class="hide-desktop logo" href="/">Adriana Yue</a>
+            <a href="/work/">work</a>
         </nav>
-        <div class="location">
+
+        <div class="hide-mobile location">
             <span id="clock">--:--:--</span>
             <strong>Barcelona</strong>
         </div>
@@ -36,7 +39,7 @@
     </main>
 
     <footer>
-        All rights reserved © Adriana Yue <span id="year"></span>
+        <span>All rights reserved © Adriana Yue 2026</span>
     </footer>
 
     <script src="script.js"></script>

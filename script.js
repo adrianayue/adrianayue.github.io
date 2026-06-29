@@ -27,9 +27,6 @@ function updateClock() {
   const { formatted } = getBarcelonaParts();
   document.getElementById('clock').textContent = formatted;
 
-  const yearOptions = { timeZone: 'Europe/Madrid', year: 'numeric' };
-  document.getElementById('year').textContent =
-    new Intl.DateTimeFormat('es-ES', yearOptions).format(new Date());
 }
 
 // ===== Colors segons hores =====
