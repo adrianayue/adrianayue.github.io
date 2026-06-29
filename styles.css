@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: 'Sentient Variable';
-  src: url('assets/Sentient-Variable.ttf') format('truetype-variations');
+  src: url('assets/Sentient-Variable.ttf') format('true-type-variations');
 }
 
 @font-face {
   font-family: 'Sentient Variable Italic';
-  src: url('assets/Sentient-VariableItalic.ttf') format('truetype-variations');
+  src: url('assets/Sentient-VariableItalic.ttf') format('true-type-variations');
 }
 
 @font-face {
