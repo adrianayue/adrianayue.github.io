@@ -1,0 +1,240 @@
+/* =====================================================================
+   1. TIPOGRAFIES
+   ===================================================================== */
+
+@font-face {
+  font-family: 'Sentient Variable';
+  src: url('fonts/Sentient-Variable.woff2') format('woff2-variations'),
+    url('fonts/Sentient-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sentient Variable Italic';
+  src: url('fonts/Sentient-VariableItalic.woff2') format('woff2-variations'),
+    url('fonts/Sentient-VariableItalic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans Variable';
+  src: url('fonts/GeneralSans-Variable.woff2') format('woff2-variations'),
+    url('fonts/GeneralSans-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans Variable Italic';
+  src: url('fonts/GeneralSans-VariableItalic.woff2') format('woff2-variations'),
+    url('fonts/GeneralSans-VariableItalic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/* =====================================================================
+   2. VARIABLES DE COLOR
+   ===================================================================== */
+
+:root {
+  --bg: #F3EDE6;
+  --text: #6F4839;
+  --transition-speed: 0.6s;
+
+  /* variables d'opacitat */
+  --op-strong: 1;
+  --op-medium: 0.7;
+  --op-soft: 0.5;
+}
+
+
+
+/* =====================================================================
+   3. BASE
+   ===================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'General Sans Variable', Verdana, Geneva, sans-serif;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+
+
+/* =====================================================================
+    4. LAYOUT COMPARTIT - HEADER
+   ===================================================================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px 0 60px;
+  font-size: 16px;
+}
+
+header div {
+  width: 100%;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+header a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
+}
+
+header a:link {
+  color: var(--text);
+}
+
+header a:visited {
+  color: var(--text);
+}
+
+header a:active {
+  color: var(--text);
+}
+
+div.logo a {
+  font-family: 'General Sans Variable', Verdana, Geneva, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+nav a {
+  font-family: 'Sentient Variable Italic', Georgia, serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+.nav-sep {
+  color: var(--text);
+  opacity: var(--op-strong);
+}
+
+.location {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+  opacity: var(--op-strong);
+}
+
+.location span {
+  color: var(--text);
+  font-weight: 350;
+  opacity: var(--op-strong);
+}
+
+.location strong {
+  color: var(--text);
+  font-weight: 500;
+  opacity: var(--op-strong);
+}
+
+/* =====================================================================
+    5. LAYOUT COMPARTIT - MAIN
+   ===================================================================== */
+
+main {
+  height: 100%;
+  padding: 96px 60px 0 60px;
+}
+
+/* =====================================================================
+    6. LAYOUT COMPARTIT - FOOTER
+   ===================================================================== */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 40px 0;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: var(--op-soft);
+}
+
+
+
+/* =====================================================================
+    6. PÀGINA: INDEX
+   ===================================================================== */
+
+
+
+main p {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.30;
+  margin: 0 0 20px 0;
+  color: var(--text);
+}
+
+main p b {
+  font-weight: 500;
+}
+
+
+@media (max-width: 900px) {
+  header {
+    padding: 30px 25px 0 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  main {
+    padding: 60px 25px 0 25px;
+  }
+
+  main p {
+    font-size: 24px;
+  }
+}
