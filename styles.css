@@ -73,6 +73,10 @@ body {
   scrollbar-gutter: stable;
 }
 
+h1 {
+  margin: 0px;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0px 16px 0px 16px;
@@ -279,18 +283,17 @@ footer {
 }
 
 .about-intro {
-  width: 41, 66666666666%;
+  width: 41.66666666666666%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 36px;
 }
 
 .about-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  margin-bottom: 36px;
 }
 
 .about-role {
@@ -312,9 +315,11 @@ footer {
 .about-contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  gap: 4px;
+}
+
+.about-contact div {
+  margin-bottom: 4px;
   font-family: "General Sans Variable";
   font-size: 16px;
   font-weight: 400;
