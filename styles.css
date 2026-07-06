@@ -67,6 +67,12 @@ body {
     color var(--transition-speed) ease;
 }
 
+.no-scroll {
+    min-height: 100vh;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0px 16px 0px 16px;
@@ -95,6 +101,15 @@ header div {
 header a {
   text-decoration: none;
   color: var(--text);
+  font-family: 'Sentient Variable Italic';
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
 }
 
 header a:hover {
@@ -133,16 +148,8 @@ nav {
   align-items: center;
 }
 
-nav a {
-  font-family: 'Sentient Variable Italic';
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 200;
-  color: var(--text);
-  opacity: var(--op-strong);
-  cursor: pointer;
-  padding: 0;
-  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+.active {
+  font-weight: 400;
 }
 
 .nav-sep {
