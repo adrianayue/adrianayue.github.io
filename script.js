@@ -35,10 +35,11 @@ function updateClock() {
 // ===== Colors segons hores =====
 
 const THEMES = [
-  { from: 0,  to: 6,  bg: '#4B362E', text: '#F3EBD5' },
-  { from: 6,  to: 12, bg: '#F3EDE6', text: '#615A57' },
-  { from: 12, to: 20, bg: '#F3EDE6', text: '#6F4839' },
-  { from: 20, to: 24, bg: '#4B362E', text: '#F3E7AD' }
+  { from: 1,  to: 7,  bg: '#4B362E', text: '#F3EBD5' },
+  { from: 7,  to: 13, bg: '#F3EDE6', text: '#615A57' },
+  { from: 13, to: 19, bg: '#F3EDE6', text: '#6F4839' },
+  { from: 19, to: 24, bg: '#4B362E', text: '#F3E7AD' },
+  { from: 0,  to: 1,  bg: '#4B362E', text: '#F3E7AD' }
 ];
 
 function getThemeForHour(hour) {

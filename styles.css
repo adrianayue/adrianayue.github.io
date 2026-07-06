@@ -104,7 +104,6 @@ header div {
 
 header a {
   text-decoration: none;
-  color: var(--text);
   font-family: 'Sentient Variable Italic';
   font-style: normal;
   font-size: 16px;
@@ -166,19 +165,18 @@ nav {
   justify-content: flex-end;
   gap: 8px;
   align-items: center;
-  opacity: var(--op-strong);
 }
 
 .location span {
   color: var(--text);
-  font-weight: 350;
   opacity: var(--op-strong);
+  font-weight: 350;
 }
 
 .location strong {
   color: var(--text);
-  font-weight: 500;
   opacity: var(--op-strong);
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
@@ -211,13 +209,16 @@ nav {
     5. LAYOUT COMPARTIT - MAIN
    ===================================================================== */
 
-main {
+main.page-home,
+main.page-about {
   height: 100%;
   padding: 96px 0px 0px 0px;
 }
 
 @media (max-width: 768px) {
-  main {
+
+  main.page-home,
+  main.page-about {
     padding: 80px 0px 0px 0px;
   }
 }
@@ -276,14 +277,16 @@ footer {
     8. PÀGINA: ABOUT
    ===================================================================== */
 
-.page-about {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+main.page-about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 24px;
 }
 
+/* SECCIÓ ESQUERRA: INTRO + DESCRIPCIÓ + CONTACTE */
+
 .about-intro {
-  width: 41.66666666666666%;
+  grid-column: span 5;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -299,14 +302,14 @@ footer {
 .about-description p.about-role {
   margin: 0 0 8px 0;
   font-family: 'General Sans Variable Italic';
-  font-size: 16px;
-  font-weight: 450;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .about-description p {
   margin: 0;
   font-family: 'General Sans Variable';
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.30;
   color: var(--text);
@@ -321,7 +324,7 @@ footer {
 .about-contact div {
   margin-bottom: 4px;
   font-family: "General Sans Variable";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: normal;
 }
@@ -329,11 +332,115 @@ footer {
 .about-contact a {
   text-decoration: underline;
   color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
 }
 
-@media (max-width: 768px) {
-  .page-about p {
-    font-size: 20px;
-    line-height: 1.30;
+.about-contact a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
+}
+
+/* SECCIÓ DRETA: CV */
+
+.about-cv {
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 24px;
+}
+
+.about-section-title {
+  grid-column: span 1;
+  padding: 3px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.about-section-title h2 {
+  margin: 0px;
+  font-family: 'Sentient Variable Italic';
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.20;
+  color: var(--text);
+  text-align: right;
+}
+
+.about-entries {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 48px 0;
+}
+
+.about-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 16px 0;
+}
+
+.about-entry h3 {
+  margin: 0px;
+  font-family: 'General Sans Variable';
+  font-size: 16px;
+  font-weight: 350;
+}
+
+.about-entry h3 b {
+  font-weight: 550;
+}
+
+.about-dates {
+  margin: 0px 0px 4px 0px;
+  font-family: 'General Sans Variable';
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 1.20;
+  opacity: var(--op-soft);
+}
+
+.about-desc {
+  margin: 0px;
+  font-family: 'General Sans Variable';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.20;
+}
+
+@media (max-width: 1025px) {
+  main.page-about {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
   }
+
+  /* ACABAR DE PENSAR EL COLUMNAT EN FORMAT PETIT*/
+  .about-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 24px;
+  }
+
+  .about-entries {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 48px 0;
+  }
+
 }
