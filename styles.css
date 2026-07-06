@@ -284,7 +284,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 36px;
-  flex-shrink: 0;
 }
 
 .about-description {
@@ -292,13 +291,12 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  align-self: stretch;
 }
 
 .about-role {
   font-family: 'General Sans Variable Italic';
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 450;
   line-height: 1.30;
   color: var(--text);
 }
