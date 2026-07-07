@@ -489,6 +489,14 @@ main.page-about {
     gap: 60px;
   }
 
+  .about-intro {
+    height: dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   /* pensar de fer descripcio full pantalla i boto perque faci scroll al cv */
   .about-section {
     display: grid;
