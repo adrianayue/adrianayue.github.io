@@ -393,6 +393,13 @@ main.page-about {
   margin: 0 0 16px 0;
 }
 
+.about-entry.honors-awards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 12px 0;
+}
+
 .about-entry h3 {
   margin: 0px;
   font-family: 'General Sans Variable';
@@ -404,7 +411,8 @@ main.page-about {
   font-weight: 550;
 }
 
-.about-entry a {
+.about-entry h3 a {
+  font-family: 'General Sans Variable Italic';
   text-decoration: underline;
   color: var(--text);
   opacity: var(--op-strong);
@@ -457,4 +465,9 @@ main.page-about {
     margin: 0 0 48px 0;
   }
 
+  body.no-scroll {
+    min-height: auto;
+    overflow: auto;
+    scrollbar-gutter: auto;
+  }
 }
