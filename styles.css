@@ -383,7 +383,7 @@ main.page-about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 48px 0;
+  margin: 0 0 32px 0;
 }
 
 .about-entry {
@@ -397,7 +397,7 @@ main.page-about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
 }
 
 .about-entry h3 {
