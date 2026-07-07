@@ -19,7 +19,7 @@
         <nav>
             <a href="/about/" class="active">about</a>
             <span class="hide-mobile nav-sep">·</span>
-            <a class="hide-desktop logo" href="/">Adriana Yue</a>
+            <a class="hide-tablet logo" href="/">Adriana Yue</a>
             <a href="/work/">work</a>
         </nav>
 
@@ -41,18 +41,24 @@
                 </p>
             </div>
 
-            <div class="about-contact">
-                <div>
-                    <a href="mailto:hello@adrianayue.com">hello@adrianayue.com</a>
+            <div class="about-contact-container">
+                <div class="about-contact">
+                    <div>
+                        <a href="mailto:hello@adrianayue.com">hello@adrianayue.com</a>
+                    </div>
+                    <div>
+                        in
+                        <a href="https://www.linkedin.com/in/adriana-yue/">@adriana-yue</a>
+                    </div>
                 </div>
-                <div>
-                    in
-                    <a href="https://www.linkedin.com/in/adriana-yue/">@adriana-yue</a>
+                <div class="hide-desktop"><button onclick="document.getElementById('section-about-cv').scrollIntoView({behavior: 'smooth'})">
+                        Ir
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section class="about-cv">
+        <section id="section-about-cv" class="about-cv">
             <div class="about-section">
                 <div class="about-section-title">
                     <h2>Experience</h2>

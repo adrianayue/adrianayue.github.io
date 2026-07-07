@@ -52,7 +52,6 @@
 html,
 body {
   margin: 0px;
-  height: 100vh;
 }
 
 body {
@@ -68,7 +67,7 @@ body {
 }
 
 .no-scroll {
-  min-height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   scrollbar-gutter: stable;
 }
@@ -182,7 +181,7 @@ nav {
 
 /* RESPONSIVITAT */
 @media (min-width: 768px) {
-  .hide-desktop {
+  .hide-tablet {
     display: none;
   }
 }
@@ -220,7 +219,11 @@ main.page-about {
 /* RESPONSIVITAT */
 @media (max-width: 768px) {
 
-  main.page-home,
+  main.page-home {
+    padding: 0px 0px 20px 0px;
+    align-items: flex-end;
+  }
+
   main.page-about {
     padding: 80px 0px 0px 0px;
   }
@@ -318,6 +321,13 @@ main.page-about {
   font-weight: 400;
   line-height: 1.30;
   color: var(--text);
+}
+
+.about-contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .about-contact {
@@ -457,6 +467,10 @@ main.page-about {
 
 /* RESPONSIVITAT */
 @media (max-width: 1025px) {
+  .hide-desktop {
+    display: none;
+  }
+
   body.no-scroll {
     min-height: auto;
     overflow: auto;
@@ -469,15 +483,11 @@ main.page-about {
     gap: 60px;
   }
 
-  /* ACABAR DE PENSAR EL COLUMNAT EN FORMAT PETIT*/
+  /* pensar de fer descripcio full pantalla i boto perque faci scroll al cv */
   .about-section {
     display: grid;
-    grid-template-columns: 76px repeat(5, 1fr);
+    grid-template-columns: 72px repeat(5, 1fr);
     grid-gap: 16px;
-  }
-
-  .about-section-title {
-    max-width: 80px;
   }
 
   .about-entries {
@@ -485,7 +495,6 @@ main.page-about {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 0 48px 0;
   }
 
 }
