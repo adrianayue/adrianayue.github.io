@@ -459,12 +459,12 @@ main.page-about {
   /* ACABAR DE PENSAR EL COLUMNAT EN FORMAT PETIT*/
   .about-section {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 24px;
+    grid-template-columns: 76px repeat(5, 1fr);
+    grid-gap: 16px;
   }
 
   .about-section-title {
-    justify-content: flex-start;
+    max-width: 80px;
   }
 
   .about-entries {
