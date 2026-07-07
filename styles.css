@@ -358,7 +358,6 @@ main.page-about {
 }
 
 .about-section-title {
-  width: max-content;
   grid-column: span 1;
   padding: 4px 0 0 0;
   display: flex;
@@ -376,7 +375,6 @@ main.page-about {
   font-weight: 300;
   line-height: 1.20;
   text-align: right;
-  white-space: nowrap;
 }
 
 .about-entries {
