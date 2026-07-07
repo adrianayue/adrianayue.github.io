@@ -358,24 +358,25 @@ main.page-about {
 }
 
 .about-section-title {
+  white-space: nowrap;
   grid-column: span 1;
   padding: 4px 0 0 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 10px;
   align-self: stretch;
+  gap: 10px;
 }
 
 .about-section-title h2 {
+  color: var(--text);
   margin: 0px;
   font-family: 'Sentient Variable Italic';
   font-size: 12px;
   font-weight: 300;
   line-height: 1.20;
-  max-height: calc(1.20em * 3);
-  color: var(--text);
   text-align: right;
+  white-space: nowrap;
 }
 
 .about-entries {
