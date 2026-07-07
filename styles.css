@@ -220,8 +220,11 @@ main.page-about {
 @media (max-width: 768px) {
 
   main.page-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
     padding: 0px 0px 20px 0px;
-    align-items: flex-end;
   }
 
   main.page-about {
