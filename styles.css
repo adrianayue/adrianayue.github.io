@@ -91,7 +91,7 @@ h1 {
    ===================================================================== */
 
 header {
-  padding: 40px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -328,6 +328,7 @@ main.page-about {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .about-contact {
