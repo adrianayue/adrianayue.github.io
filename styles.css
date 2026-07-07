@@ -374,6 +374,7 @@ main.page-about {
   font-size: 12px;
   font-weight: 300;
   line-height: 1.20;
+  max-height: calc(1.20em * 3);
   color: var(--text);
   text-align: right;
 }
