@@ -307,6 +307,7 @@ main.page-about {
 .about-description p.about-role {
   margin: 0 0 8px 0;
   font-family: 'General Sans Variable Italic';
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -361,11 +362,12 @@ main.page-about {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 24px;
+  margin: 0 0 24px 0;
 }
 
 .about-section-title {
   grid-column: span 1;
-  padding: 4px 0 0 0;
+  padding: 3px 0 0 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -394,14 +396,13 @@ main.page-about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 32px 0;
 }
 
 .about-entry {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0;
 }
 
 .about-entry.honors-awards {
@@ -414,7 +415,7 @@ main.page-about {
 .about-entry h3 {
   margin: 0px;
   font-family: 'General Sans Variable';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 350;
 }
 
@@ -438,9 +439,9 @@ main.page-about {
 }
 
 .about-dates {
-  margin: 0px 0px 4px 0px;
+  margin: 0px 0px 2px 0px;
   font-family: 'General Sans Variable';
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 350;
   line-height: 1.20;
   opacity: var(--op-medium);
@@ -449,7 +450,7 @@ main.page-about {
 .about-desc {
   margin: 0px;
   font-family: 'General Sans Variable';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.20;
 }
