@@ -466,11 +466,13 @@ main.page-about {
 }
 
 /* RESPONSIVITAT */
-@media (max-width: 1025px) {
+@media (min-width: 1025px) {
   .hide-desktop {
     display: none;
   }
+}
 
+@media (max-width: 1025px) {
   body.no-scroll {
     min-height: auto;
     overflow: auto;
