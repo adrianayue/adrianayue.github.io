@@ -404,13 +404,27 @@ main.page-about {
   font-weight: 550;
 }
 
+.about-entry a {
+  text-decoration: underline;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+.about-entry a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
+}
+
 .about-dates {
   margin: 0px 0px 4px 0px;
   font-family: 'General Sans Variable';
   font-size: 14px;
   font-weight: 350;
   line-height: 1.20;
-  opacity: var(--op-soft);
+  opacity: var(--op-medium);
 }
 
 .about-desc {
