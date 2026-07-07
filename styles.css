@@ -302,7 +302,6 @@ main.page-about {
 .about-description p.about-role {
   margin: 0 0 8px 0;
   font-family: 'General Sans Variable Italic';
-  font-size: 14px;
   font-weight: 500;
 }
 
@@ -360,7 +359,7 @@ main.page-about {
 
 .about-section-title {
   grid-column: span 1;
-  padding: 3px 0;
+  padding: 4px 0 0 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -445,6 +444,12 @@ main.page-about {
 }
 
 @media (max-width: 1025px) {
+  body.no-scroll {
+    min-height: auto;
+    overflow: auto;
+    scrollbar-gutter: auto;
+  }
+
   main.page-about {
     display: flex;
     flex-direction: column;
@@ -458,6 +463,10 @@ main.page-about {
     grid-gap: 24px;
   }
 
+  .about-section-title {
+    justify-content: flex-start;
+  }
+
   .about-entries {
     grid-column: span 5;
     display: flex;
@@ -466,9 +475,4 @@ main.page-about {
     margin: 0 0 48px 0;
   }
 
-  body.no-scroll {
-    min-height: auto;
-    overflow: auto;
-    scrollbar-gutter: auto;
-  }
 }
