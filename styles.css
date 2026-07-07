@@ -358,7 +358,7 @@ main.page-about {
 }
 
 .about-section-title {
-  white-space: nowrap;
+  width: max-content;
   grid-column: span 1;
   padding: 4px 0 0 0;
   display: flex;
