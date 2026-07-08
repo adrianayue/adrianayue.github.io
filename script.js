@@ -80,8 +80,7 @@ function init() {
   window.addEventListener('resize', setHeaderHeightVar);
   window.addEventListener('load', setHeaderHeightVar);
 
-  // Els fonts variables (Sentient, General Sans) poden acabar de carregar
-  // després del DOMContentLoaded i canviar lleugerament l'alçada del header
+  // Les fonts variables es poden carregar més tard i canviar l'alçada del header
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(setHeaderHeightVar);
   }
