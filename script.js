@@ -63,17 +63,6 @@ function setHeaderHeightVar() {
   }
 }
 
-// ===== Botó "scroll to cv" a la pàgina about =====
-
-function initScrollToCv() {
-  const btn = document.getElementById('scroll-to-cv');
-  const target = document.getElementById('section-about-cv');
-  if (btn && target) {
-    btn.addEventListener('click', () => {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
-}
 // ===== Inicialització =====
 function tick() {
   updateClock();
@@ -82,9 +71,3 @@ function tick() {
 
 tick();
 setInterval(tick, 1000);
-
-function init() {
-  setHeaderHeightVar();
-  initScrollToCv();
-  window.addEventListener('resize', setHeaderHeightVar);
-}
