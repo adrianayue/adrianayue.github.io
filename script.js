@@ -28,8 +28,10 @@ function updateClock() {
   document.getElementById('clock').textContent = formatted;
 
   const yearOptions = { timeZone: 'Europe/Madrid', year: 'numeric' };
-  document.getElementById('year').textContent =
-    new Intl.DateTimeFormat('es-ES', yearOptions).format(new Date());
+  const yearText = new Intl.DateTimeFormat('es-ES', yearOptions).format(new Date());
+  document.querySelectorAll('.year').forEach(el => {
+    el.textContent = yearText;
+  });
 }
 
 // ===== Colors segons hores =====
