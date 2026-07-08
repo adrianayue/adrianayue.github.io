@@ -257,11 +257,21 @@ footer {
 }
 
 /* RESPONSIVITAT */
+@media (min-width: 768px) and (max-width: 1025px) {
+  .hide-tablet {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   footer {
     font-size: 10px;
   }
-}
+  
+  .hide-mobile {
+    display: none;
+  }
+}  
 
 
 
