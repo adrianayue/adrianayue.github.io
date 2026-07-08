@@ -494,8 +494,9 @@ main.page-about {
   /* about-intro ocupa tota la pantalla disponible (viewport - alçada del header) */
   .about-intro {
     min-height: calc(100dvh - var(--header-h, 96px));
-    justify-content: space-between;
-    padding: 24px 0 24px 0;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 0 0 24px 0;
   }
 
   .about-description {
@@ -505,6 +506,7 @@ main.page-about {
   /* fa que el scroll del botó "ir" deixi la secció about-cv just sota el header */
   #section-about-cv {
     scroll-margin-top: var(--header-h, 96px);
+    min-height: calc(100dvh - var(--header-h, 96px));
   }
 
   .scroll-arrow {
