@@ -245,12 +245,20 @@ main.page-about {
     6. LAYOUT COMPARTIT - FOOTER
    ===================================================================== */
 
-footer {
+.footer-div {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0px 0px 20px 0px;
+}
+
+footer {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 12px;
   font-weight: 400;
   opacity: var(--op-soft);
@@ -382,17 +390,6 @@ main.page-about {
 
 .about-contact a:hover {
   color: var(--text);
-  opacity: var(--op-soft);
-}
-
-footer.hide-tablet.hide-mobile {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: left;
-  padding: 0px 0px 20px 0px;
-  font-size: 12px;
-  font-weight: 400;
   opacity: var(--op-soft);
 }
 
