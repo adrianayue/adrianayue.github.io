@@ -73,3 +73,23 @@ function tick() {
 
 tick();
 setInterval(tick, 1000);
+
+function init() {
+  setHeaderHeightVar();
+  initScrollToCv();
+  window.addEventListener('resize', setHeaderHeightVar);
+  window.addEventListener('load', setHeaderHeightVar);
+
+  // Els fonts variables (Sentient, General Sans) poden acabar de carregar
+  // després del DOMContentLoaded i canviar lleugerament l'alçada del header
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(setHeaderHeightVar);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  // el DOM ja estava carregat quan el script s'ha executat
+  init();
+}

@@ -96,13 +96,11 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background: transparent;
 
-  header {
-    position: sticky;
-    top: 0px;
-    z-index: 100;
-    background: transparent;
-  }
 }
 
 header div {
@@ -184,6 +182,20 @@ nav {
   color: var(--text);
   opacity: var(--op-strong);
   font-weight: 500;
+}
+
+/* Els textos del header canvien al color complementari de qualsevol element
+   que quedi per sota (fons, text, imatges...), independentment del tema
+   clar/fosc actiu. El blanc de base és necessari perquè "difference" doni
+   sempre el complementari exacte del que hi ha darrere. */
+header a,
+header a:link,
+header a:visited,
+header a:active,
+header span,
+header strong {
+  color: #ffffff !important;
+  mix-blend-mode: difference;
 }
 
 /* RESPONSIVITAT */
