@@ -80,5 +80,11 @@ function tick() {
   applyTheme();
 }
 
-tick();
-setInterval(tick, 1000);
+function init() {
+  tick();
+  setInterval(tick, 1000);
+
+  setHeaderHeightVar();
+  initScrollToCv();
+  window.addEventListener('resize', setHeaderHeightVar);
+}
