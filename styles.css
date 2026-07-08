@@ -487,14 +487,48 @@ main.page-about {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    padding-top: 0px;
+    height: auto;
   }
 
+  /* about-intro ocupa tota la pantalla disponible (viewport - alçada del header) */
   .about-intro {
-    height: dvh;
-    display: flex;
-    flex-direction: column;
+    min-height: calc(100dvh - var(--header-h, 96px));
     justify-content: space-between;
-    align-items: flex-start;
+    padding: 24px 0 24px 0;
+  }
+
+  .about-description {
+    margin: 0;
+  }
+
+  /* fa que el scroll del botó "ir" deixi la secció about-cv just sota el header */
+  #section-about-cv {
+    scroll-margin-top: var(--header-h, 96px);
+  }
+
+  .scroll-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--text);
+    background: transparent;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+  }
+
+  .scroll-arrow:hover {
+    opacity: var(--op-soft);
+  }
+
+  .scroll-arrow svg {
+    display: block;
   }
 
   /* pensar de fer descripcio full pantalla i boto perque faci scroll al cv */

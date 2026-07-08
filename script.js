@@ -54,6 +54,26 @@ function applyTheme() {
   root.style.setProperty('--text', theme.text);
 }
 
+// ===== Alçada del header (per calcular scroll i alçades disponibles) =====
+
+function setHeaderHeightVar() {
+  const header = document.querySelector('header');
+  if (header) {
+    document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  }
+}
+
+// ===== Botó "scroll to cv" a la pàgina about =====
+
+function initScrollToCv() {
+  const btn = document.getElementById('scroll-to-cv');
+  const target = document.getElementById('section-about-cv');
+  if (btn && target) {
+    btn.addEventListener('click', () => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+}
 // ===== Inicialització =====
 function tick() {
   updateClock();
