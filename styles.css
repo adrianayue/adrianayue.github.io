@@ -250,7 +250,7 @@ main.page-about {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0px 0px 20px 0px;
+  padding: 20px 0px 20px 0px;
 }
 
 footer {
@@ -262,6 +262,7 @@ footer {
   font-size: 12px;
   font-weight: 400;
   opacity: var(--op-soft);
+  margin-bottom: 6px;
 }
 
 /* RESPONSIVITAT */
@@ -275,11 +276,11 @@ footer {
   footer {
     font-size: 10px;
   }
-  
+
   .hide-mobile {
     display: none;
   }
-}  
+}
 
 
 
@@ -314,6 +315,7 @@ footer {
    ===================================================================== */
 
 main.page-about {
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 24px;
@@ -396,6 +398,7 @@ main.page-about {
 /* SECCIÓ DRETA: CV */
 
 .about-cv {
+  height: fit-content;
   grid-column: span 7;
   display: flex;
   flex-direction: column;
@@ -408,6 +411,10 @@ main.page-about {
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 24px;
   margin: 0 0 24px 0;
+}
+
+.about-section.education-section {
+  margin-bottom: 0px;
 }
 
 .about-section-title {
@@ -572,6 +579,10 @@ main.page-about {
     display: grid;
     grid-template-columns: 72px repeat(5, 1fr);
     grid-gap: 16px;
+  }
+
+  .about-section.education-section {
+    margin-bottom: 24px;
   }
 
   .about-entries {
