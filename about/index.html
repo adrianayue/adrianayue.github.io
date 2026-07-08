@@ -31,36 +31,42 @@
 
     <main class="page-about">
         <!-- Columna esquerra: presentació y contacte -->
-        <section class="about-intro">
-            <div class="about-description">
-                <p class="about-role">Graphic &amp; UX/UI Designer</p>
-                <p>
-                    Adriana Yue is a designer based in Barcelona that combines creativity, critical
-                    thinking, and logic to create solutions tailored to the diverse needs of users,
-                    always with special attention to detail.
-                </p>
-            </div>
+        <section class="about-intro-container">
+            <div class="about-intro">
+                <div class="about-description">
+                    <p class="about-role">Graphic &amp; UX/UI Designer</p>
+                    <p>
+                        Adriana Yue is a designer based in Barcelona that combines creativity, critical
+                        thinking, and logic to create solutions tailored to the diverse needs of users,
+                        always with special attention to detail.
+                    </p>
+                </div>
 
-            <div class="about-contact-container">
-                <div class="about-contact">
-                    <div>
-                        <a href="mailto:hello@adrianayue.com">hello@adrianayue.com</a>
+                <div class="about-contact-container">
+                    <div class="about-contact">
+                        <div>
+                            <a href="mailto:hello@adrianayue.com">hello@adrianayue.com</a>
+                        </div>
+                        <div>
+                            in
+                            <a href="https://www.linkedin.com/in/adriana-yue/">@adriana-yue</a>
+                        </div>
                     </div>
-                    <div>
-                        in
-                        <a href="https://www.linkedin.com/in/adriana-yue/">@adriana-yue</a>
+                    <div class="hide-desktop">
+                        <button class="scroll-arrow" aria-label="Scroll to curriculum section"
+                            onclick="document.getElementById('section-about-cv').scrollIntoView({behavior: 'smooth'})">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4V20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="1.6"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                </div>
-                <div class="hide-desktop">
-                    <button class="scroll-arrow" aria-label="Scroll to curriculum section"
-                        onclick="document.getElementById('section-about-cv').scrollIntoView({behavior: 'smooth'})">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 4V20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="1.6"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
                 </div>
             </div>
+            <footer class="hide-tablet hide-mobile">
+                All rights reserved © Adriana Yue&nbsp;<span id="year"></span>
+            </footer>
         </section>
 
         <section id="section-about-cv" class="about-cv">
@@ -149,7 +155,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="hide-desktop">
         All rights reserved © Adriana Yue&nbsp;<span id="year"></span>
     </footer>
 

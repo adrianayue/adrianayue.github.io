@@ -96,6 +96,13 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
+
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background: transparent;
+  }
 }
 
 header div {
@@ -296,8 +303,14 @@ main.page-about {
 
 /* SECCIÓ ESQUERRA: INTRO + DESCRIPCIÓ + CONTACTE */
 
-.about-intro {
+.about-intro-container {
   grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-intro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -359,6 +372,17 @@ main.page-about {
 
 .about-contact a:hover {
   color: var(--text);
+  opacity: var(--op-soft);
+}
+
+footer.hide-tablet.hide-mobile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding: 0px 0px 20px 0px;
+  font-size: 12px;
+  font-weight: 400;
   opacity: var(--op-soft);
 }
 
@@ -492,11 +516,14 @@ main.page-about {
   }
 
   /* about-intro ocupa tota la pantalla disponible (viewport - alçada del header) */
-  .about-intro {
-    min-height: calc(100dvh - var(--header-h, 96px));
+  .about-intro-container {
+    min-height: calc(100dvh - var(--header-h, 40px));
     justify-content: flex-end;
-    gap: 2rem;
     padding: 0 0 24px 0;
+  }
+
+  .about-intro {
+    gap: 2rem;
   }
 
   .about-description {
