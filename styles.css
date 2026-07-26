@@ -213,7 +213,7 @@ nav {
 main.page-home,
 main.page-about {
   height: 100%;
-  padding: 96px 0px 0px 0px;
+  padding: 96px 0px 20px 0px;
 }
 
 /* RESPONSIVITAT */
@@ -308,7 +308,7 @@ footer {
    ===================================================================== */
 
 main.page-about {
-  height: fit-content;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 24px;
@@ -316,14 +316,8 @@ main.page-about {
 
 /* SECCIÓ ESQUERRA: INTRO + DESCRIPCIÓ + CONTACTE */
 
-.about-intro-container {
-  grid-column: span 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .about-intro {
+  grid-column: span 5;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -333,7 +327,7 @@ main.page-about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 36px 0;
+  margin: 0 0 40px 0;
 }
 
 .about-description p.about-role {
