@@ -195,24 +195,59 @@ nav a:last-child {
   }
 }
 
+@media (max-width: 1025px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    isolation: isolate;
+    /* perquè el ::before quedi darrere del contingut del header */
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    /* percentatge baix = transparencia alta*/
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    z-index: -1;
+
+    mask-image: linear-gradient(to bottom, black 50%, transparent 105%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 105%);
+  }
+}
+
 @media (min-width: 768.02px) and (max-width: 1025px) {
+  header::before {
+    left: -60px;
+    right: -60px;
+  }
+
   .hide-tablet {
     display: none;
   }
 
   .header-bar {
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px 32px 0px;
     font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
+  header::before {
+    left: -16px;
+    right: -16px;
+  }
+
   .hide-mobile {
     display: none;
   }
 
   .header-bar {
-    padding: 16px 0px 0px 0px;
+    padding: 16px 0px 16px 0px;
     font-size: 14px;
   }
 
@@ -232,14 +267,7 @@ nav a:last-child {
   }
 }
 
-@media (max-width: 1025px) {
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
 
-}
 
 
 /* =====================================================================
@@ -549,7 +577,7 @@ main.page-about {
 
   /* about-intro ocupa tota la pantalla disponible (viewport - alçada del header) */
   .about-intro {
-    min-height: calc(100svh - var(--header-h, 40px));
+    min-height: calc(100dvh - var(--header-h, 40px));
     justify-content: flex-end;
     padding: 0 0 24px 0;
     gap: 2rem;
