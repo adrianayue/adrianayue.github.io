@@ -90,7 +90,7 @@ h1 {
     4. LAYOUT COMPARTIT - HEADER
    ===================================================================== */
 
-header {
+.header-bar {
   padding: 20px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
@@ -98,7 +98,7 @@ header {
   font-size: 16px;
 }
 
-header div {
+.header-bar div {
   width: 100%;
 }
 
@@ -107,7 +107,7 @@ header a {
   font-family: 'Sentient Variable Italic';
   font-style: normal;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 250;
   color: var(--text);
   opacity: var(--op-strong);
   cursor: pointer;
@@ -145,19 +145,28 @@ header a:active {
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  gap: 12px;
+}
+
+nav a:first-child {
+  justify-self: end;
+}
+
+nav a:last-child {
+  justify-self: start;
+}
+
+.nav-sep {
+  justify-self: center;
+  color: var(--text);
+  opacity: var(--op-strong);
 }
 
 .active {
   font-weight: 400;
-}
-
-.nav-sep {
-  color: var(--text);
-  opacity: var(--op-strong);
 }
 
 .location {
@@ -191,16 +200,24 @@ nav {
     display: none;
   }
 
-  header {
+  .header-bar {
     padding: 16px 0px 0px 0px;
+    font-size: 14px;
   }
 
-  header nav {
+  header a {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  nav {
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
   }
 }
 
@@ -382,6 +399,7 @@ main.page-about {
   opacity: var(--op-soft);
 }
 
+
 /* SECCIÓ DRETA: CV */
 
 .about-cv {
@@ -405,6 +423,7 @@ main.page-about {
 }
 
 .about-section-title {
+  min-width: stretch;
   grid-column: span 1;
   padding: 3px 0 0 0;
   display: flex;
@@ -441,21 +460,21 @@ main.page-about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
 }
 
-.about-entry.honors-awards {
+.about-entry-less-margin {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 4px 0;
+  margin: 0 0 8px 0;
 }
 
 .about-entry h3 {
   margin: 0px;
   font-family: 'General Sans Variable';
   font-size: 14px;
-  font-weight: 350;
+  font-weight: 400;
 }
 
 .about-entry h3 b {
@@ -478,21 +497,22 @@ main.page-about {
 }
 
 .about-dates {
-  margin: 0px 0px 2px 0px;
-  font-family: 'General Sans Variable';
-  font-size: 13px;
-  font-weight: 350;
-  line-height: 1.20;
-  opacity: var(--op-medium);
-}
-
-.about-desc {
   margin: 0px;
   font-family: 'General Sans Variable';
   font-size: 14px;
   font-weight: 400;
   line-height: 1.20;
+  opacity: var(--op-medium);
 }
+
+.about-entry-description {
+  margin: 0 0 2px 0;
+  font-family: 'General Sans Variable';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.20;
+}
+
 
 /* RESPONSIVITAT */
 @media (min-width: 1025px) {
@@ -535,8 +555,8 @@ main.page-about {
   }
 
   .scroll-arrow {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1px solid var(--text);
     background: transparent;
@@ -561,7 +581,7 @@ main.page-about {
   /* pensar de fer descripcio full pantalla i boto perque faci scroll al cv */
   .about-section {
     display: grid;
-    grid-template-columns: 72px repeat(5, 1fr);
+    grid-template-columns: 64px repeat(5, 1fr);
     grid-gap: 16px;
   }
 
