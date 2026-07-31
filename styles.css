@@ -29,8 +29,8 @@
    ===================================================================== */
 
 :root {
-  --bg: #F3EDE6;
-  --text: #6F4839;
+  --bg: #EAE5DD;
+  --text: #612705;
   --transition-speed: 0.6s;
 
   /* variables d'opacitat */
@@ -55,8 +55,8 @@ body {
 }
 
 body {
-  padding: 0px 60px 0px 60px;
-  display: flex;
+  padding: 0px 40px 0px 40px;
+  display: flex; 
   flex-direction: column;
   justify-content: space-between;
   background: var(--bg);
@@ -222,8 +222,8 @@ nav a:last-child {
 
 @media (min-width: 768.02px) and (max-width: 1025px) {
   header::before {
-    left: -60px;
-    right: -60px;
+    left: -40px;
+    right: -40px;
   }
 
   .hide-tablet {
