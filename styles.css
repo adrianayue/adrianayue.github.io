@@ -577,7 +577,7 @@ main.page-about {
 
   /* about-intro ocupa tota la pantalla disponible (viewport - alçada del header) */
   .about-intro {
-    min-height: calc(100dvh - var(--header-h, 40px));
+    min-height: calc(100svh - var(--header-h, 40px));
     justify-content: flex-end;
     padding: 0 0 24px 0;
     gap: 2rem;
