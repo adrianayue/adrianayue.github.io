@@ -91,7 +91,7 @@ h1 {
    ===================================================================== */
 
 .header-bar {
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,6 +193,11 @@ nav a:last-child {
   .hide-tablet {
     display: none;
   }
+  
+  .header-bar {
+    padding: 20px 0px 20px 0px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -221,6 +226,14 @@ nav a:last-child {
   }
 }
 
+@media (max-width: 1025px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+}
 
 
 /* =====================================================================
@@ -578,7 +591,10 @@ main.page-about {
     display: block;
   }
 
-  /* pensar de fer descripcio full pantalla i boto perque faci scroll al cv */
+  .about-cv {
+    padding: 24px 0 0 0;
+  }
+
   .about-section {
     display: grid;
     grid-template-columns: 64px repeat(5, 1fr);
