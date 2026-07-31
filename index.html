@@ -3,6 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        (function () {
+            var hour = new Date().toLocaleString('en-US', {
+                timeZone: 'Europe/Madrid',
+                hour: 'numeric',
+                hour12: false
+            });
+            hour = parseInt(hour, 10);
+
+            var THEMES = [
+                { from: 1, to: 8, bg: '#3C2C23', text: '#EAE5DD' },
+                { from: 8, to: 14, bg: '#EAE5DD', text: '#582508' },
+                { from: 14, to: 19, bg: '#EAE5DD', text: '#582508' },
+                { from: 19, to: 24, bg: '#3C2C23', text: '#F6ECBD' },
+                { from: 0, to: 1, bg: '#3C2C23', text: '#F6ECBD' }
+            ];
+
+            var theme = THEMES.find(function (t) {
+                return hour >= t.from && hour < t.to;
+            }) || THEMES[2];
+
+            document.documentElement.style.setProperty('--bg', theme.bg);
+            document.documentElement.style.setProperty('--text', theme.text);
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 
