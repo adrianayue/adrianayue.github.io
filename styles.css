@@ -462,7 +462,7 @@ main.page-about {
 .about-section-title {
   min-width: stretch;
   grid-column: span 1;
-  padding: 3px 0 0 0;
+  padding: 1.5px 0 0 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -512,6 +512,7 @@ main.page-about {
   font-family: 'General Sans Variable';
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.25;
 }
 
 .about-entry h3 b {
@@ -547,7 +548,7 @@ main.page-about {
   font-family: 'General Sans Variable';
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.20;
+  line-height: 1.25;
 }
 
 
