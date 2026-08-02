@@ -347,6 +347,20 @@ footer {
   font-weight: 550;
 }
 
+.page-home a {
+  text-decoration: underline;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+.page-home a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
+}
+
 /* RESPONSIVITAT */
 @media (max-width: 768px) {
   .page-home p {
