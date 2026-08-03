@@ -56,7 +56,7 @@ body {
 
 body {
   padding: 0px 40px 0px 40px;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: var(--bg);
@@ -133,6 +133,7 @@ header a:active {
 }
 
 .logo {
+  width: fit-content;
   font-family: 'General Sans Variable';
   font-style: normal;
   font-size: 16px;
@@ -186,6 +187,37 @@ nav a:last-child {
   color: var(--text);
   opacity: var(--op-strong);
   font-weight: 500;
+}
+
+/* header home */
+
+header .logo a {
+  font-family: 'General Sans Variable';
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+header .logo a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
+}
+
+header .logo a:link {
+  color: var(--text);
+}
+
+header .logo a:visited {
+  color: var(--text);
+}
+
+header .logo a:active {
+  color: var(--text);
 }
 
 /* RESPONSIVITAT */
@@ -537,13 +569,16 @@ main.page-about {
   font-family: 'General Sans Variable Italic';
   text-decoration: underline;
   color: var(--text);
-  opacity: var(--op-strong);
   cursor: pointer;
   padding: 0;
+}
+
+.about-entry h3 a .link-text {
+  opacity: var(--op-strong);
   transition: opacity 0.3s ease, color var(--transition-speed) ease;
 }
 
-.about-entry a:hover {
+.about-entry h3 a:hover .link-text {
   color: var(--text);
   opacity: var(--op-soft);
 }
@@ -565,6 +600,31 @@ main.page-about {
   line-height: 1.25;
 }
 
+.preview-link {
+  position: relative;
+}
+
+.hover-preview {
+  position: absolute;
+  top: -250%;
+  left: 90%;
+  transform: scale(0.8);
+  width: 200px;
+  max-width: var(--preview-max-w, 200px);
+  height: auto;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 20;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .preview-link:hover .hover-preview {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
 
 /* RESPONSIVITAT */
 @media (max-width: 1025px) {
