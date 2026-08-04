@@ -66,25 +66,34 @@ function setHeaderHeightVar() {
 }
 
 // ===== Previews d'imatge en hover (secció Honors & Awards) =====
+ 
+function positionHoverPreviews() {
+  const intro = document.querySelector('.about-intro');
+  const cv = document.querySelector('#section-about-cv');
+  if (!intro || !cv) return;
+ 
+  const introRect = intro.getBoundingClientRect();
+  const cvRect = cv.getBoundingClientRect();
+ 
+  const height = introRect.height * 0.5;
+  const left = introRect.left;
+  const bottom = window.innerHeight - cvRect.bottom;
 
+  document.documentElement.style.setProperty('--preview-left', left + 'px');
+  document.documentElement.style.setProperty('--preview-bottom', bottom + 'px');
+  document.documentElement.style.setProperty('--preview-height', height + 'px');
+}
+ 
 function initHoverPreviews() {
   const links = document.querySelectorAll('.preview-link');
-  const sidePadding = 40; // marge de seguretat respecte a la vora de la pantalla
-
+ 
   links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      const rect = link.getBoundingClientRect();
-      const availableSpace = window.innerWidth - rect.left - 20 - sidePadding;
-      // 20px = el "left: 20px" definit al CSS del preview
-
-      const img = link.querySelector('.hover-preview');
-      if (img) {
-        img.style.setProperty('--preview-max-w', Math.max(availableSpace, 120) + 'px');
-      }
-    });
+    link.addEventListener('mouseenter', positionHoverPreviews);
   });
+ 
+  window.addEventListener('resize', positionHoverPreviews);
 }
-
+ 
 // ===== Inicialització =====
 function tick() {
   updateClock();
@@ -96,7 +105,6 @@ setInterval(tick, 1000);
 
 function init() {
   setHeaderHeightVar();
-  initScrollToCv();
   initHoverPreviews();
   window.addEventListener('resize', setHeaderHeightVar);
   window.addEventListener('load', setHeaderHeightVar);

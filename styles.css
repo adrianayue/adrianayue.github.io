@@ -605,24 +605,24 @@ main.page-about {
 }
 
 .hover-preview {
-  position: absolute;
-  top: -250%;
-  left: 90%;
-  transform: scale(0.8);
-  width: 200px;
-  max-width: var(--preview-max-w, 200px);
-  height: auto;
-  border-radius: 2px;
+  position: fixed;
+  left: var(--preview-left, 40px);
+  bottom: var(--preview-bottom, 40px);
+  height: var(--preview-height, 200px);
+  width: auto;
+  transform: scale(0.9);
+  transform-origin: bottom left;
+  border-radius: 0px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
   z-index: 20;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (min-width: 1025.02px) and (hover: hover) and (pointer: fine) {
   .preview-link:hover .hover-preview {
-    opacity: 0.8;
-    transform: scale(1);
+    opacity: 0.9;
+    transform: scale(0.9);
   }
 }
 
