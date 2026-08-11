@@ -77,11 +77,44 @@ h1 {
 }
 
 /* RESPONSIVITAT */
+
 @media (max-width: 768px) {
+
   body {
     padding: 0px 16px 0px 16px;
   }
 
+  body.no-scroll.home {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+    scrollbar-gutter: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge modern (Chromium) */
+  }
+
+}
+
+@media (max-width: 1025px) {
+
+  body.no-scroll.about {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+    scrollbar-gutter: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge modern (Chromium) */
+  }
 }
 
 
@@ -221,13 +254,37 @@ header .logo a:active {
 }
 
 /* RESPONSIVITAT */
-@media (min-width: 1025.02px) {
-  .hide-desktop {
-    display: none;
+
+@media (max-width: 768px) {
+  
+  header::before {
+    left: -16px;
+    right: -16px;
+  }
+
+  .header-bar {
+    padding: 16px 0px 16px 0px;
+    font-size: 14px;
+  }
+
+  header a {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 @media (max-width: 1025px) {
+
   header {
     position: sticky;
     top: 0;
@@ -253,13 +310,10 @@ header .logo a:active {
 }
 
 @media (min-width: 768.02px) and (max-width: 1025px) {
+  
   header::before {
     left: -40px;
     right: -40px;
-  }
-
-  .hide-tablet {
-    display: none;
   }
 
   .header-bar {
@@ -268,72 +322,53 @@ header .logo a:active {
   }
 }
 
-@media (max-width: 768px) {
-  header::before {
-    left: -16px;
-    right: -16px;
-  }
-
-  .hide-mobile {
-    display: none;
-  }
-
-  .header-bar {
-    padding: 16px 0px 16px 0px;
-    font-size: 14px;
-  }
-
-  header a {
-    font-size: 14px;
-  }
-
-  .logo {
-    font-size: 14px;
-  }
-
-  nav {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-
 
 
 /* =====================================================================
     5. LAYOUT COMPARTIT - MAIN
    ===================================================================== */
 
+/* ========== MAIN ========== */
 main.page-home,
 main.page-about {
   height: 100%;
   padding: 96px 0px 20px 0px;
 }
 
-/* RESPONSIVITAT */
-@media (max-width: 768px) {
 
-  main.page-home {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
-    padding: 0px 0px 20px 0px;
-  }
 
-  main.page-about {
-    padding: 80px 0px 0px 0px;
-  }
+/* ========== CONTACT ========== */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact div {
+  margin-bottom: 4px;
+  font-family: "General Sans Variable";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contact a {
+  text-decoration: underline;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+.contact a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
 }
 
 
 
-/* =====================================================================
-    6. LAYOUT COMPARTIT - FOOTER
-   ===================================================================== */
-
+/* ========== FOOTER ========== */
 .footer-div {
   display: flex;
   justify-content: center;
@@ -355,7 +390,9 @@ footer {
 }
 
 /* RESPONSIVITAT */
-@media (max-width: 769px) {
+
+@media (max-width: 768px) {
+
   footer {
     font-size: 10px;
   }
@@ -364,14 +401,36 @@ footer {
 
 
 /* =====================================================================
-    7. PÀGINA: HOME
+    6. PÀGINA: HOME
    ===================================================================== */
+
+.page-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.selected-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 20px 0px 0px 0px;
+}
 
 .page-home p {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.30;
-  margin: 0 0 20px 0;
+  margin: 0px;
   color: var(--text);
 }
 
@@ -394,7 +453,17 @@ footer {
 }
 
 /* RESPONSIVITAT */
+
 @media (max-width: 768px) {
+
+  main.page-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+    padding: 0px 0px 20px 0px;
+  }
+  
   .page-home p {
     font-size: 20px;
     line-height: 1.30;
@@ -404,7 +473,7 @@ footer {
 
 
 /* =====================================================================
-    8. PÀGINA: ABOUT
+    7. PÀGINA: ABOUT
    ===================================================================== */
 
 main.page-about {
@@ -428,6 +497,7 @@ main.page-about {
   flex-direction: column;
   align-items: flex-start;
   margin: 0 0 40px 0;
+  line-height: 0.4;
 }
 
 .about-description p.about-role {
@@ -452,34 +522,6 @@ main.page-about {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.about-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.about-contact div {
-  margin-bottom: 4px;
-  font-family: "General Sans Variable";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.about-contact a {
-  text-decoration: underline;
-  color: var(--text);
-  opacity: var(--op-strong);
-  cursor: pointer;
-  padding: 0;
-  transition: opacity 0.3s ease, color var(--transition-speed) ease;
-}
-
-.about-contact a:hover {
-  color: var(--text);
-  opacity: var(--op-soft);
 }
 
 
@@ -608,8 +650,8 @@ main.page-about {
   position: fixed;
   left: var(--preview-left, 40px);
   bottom: var(--preview-bottom, 40px);
-  height: var(--preview-height, 200px);
-  max-height: 350px;
+  height: var(--preview-height, 250px);
+  max-height: 250px;
   width: auto;
   transform: scale(0.9);
   transform-origin: bottom left;
@@ -620,7 +662,15 @@ main.page-about {
   z-index: 20;
 }
 
+@media (max-width: 768px) {
+
+  main.page-about {
+    padding: 80px 0px 0px 0px;
+  }
+}
+
 @media (min-width: 1025.02px) and (hover: hover) and (pointer: fine) {
+  
   .preview-link:hover .hover-preview {
     opacity: 0.9;
     transform: scale(0.9);
@@ -628,20 +678,10 @@ main.page-about {
 }
 
 /* RESPONSIVITAT */
-@media (max-width: 1025px) {
-  body.no-scroll {
-    height: auto;
-    min-height: 100svh;
-    overflow: visible;
-    scrollbar-gutter: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none
-  }
 
-  html::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari, Edge modern (Chromium) */
-  }
+@media (max-width: 1025px) {
+
+  
 
   main.page-about {
     display: flex;
@@ -719,7 +759,7 @@ main.page-about {
 
 
 /* =====================================================================
-    9. PÀGINA: WORK
+    8. PÀGINA: WORK
    ===================================================================== */
 
 
@@ -783,4 +823,31 @@ main.page-about {
 
 .page-404 a:active {
   color: var(--text);
+}
+
+
+
+/* =====================================================================
+    . RESPONSIVITATS HIDE
+   ===================================================================== */
+
+@media (min-width: 1025.02px) {
+
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768.02px) and (max-width: 1025px) {
+  
+  .hide-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hide-mobile {
+    display: none;
+  }
 }

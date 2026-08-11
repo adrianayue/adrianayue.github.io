@@ -75,7 +75,7 @@ function positionHoverPreviews() {
   const introRect = intro.getBoundingClientRect();
   const cvRect = cv.getBoundingClientRect();
  
-  const height = introRect.height * 0.5;
+  const height = introRect.height * 0.45;
   const left = introRect.left;
   const bottom = window.innerHeight - cvRect.bottom;
 
