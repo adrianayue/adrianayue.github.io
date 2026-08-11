@@ -609,6 +609,7 @@ main.page-about {
   left: var(--preview-left, 40px);
   bottom: var(--preview-bottom, 40px);
   height: var(--preview-height, 200px);
+  max-height: 350px;
   width: auto;
   transform: scale(0.9);
   transform-origin: bottom left;
