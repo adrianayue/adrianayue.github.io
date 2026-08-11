@@ -715,3 +715,72 @@ main.page-about {
   }
 
 }
+
+
+
+/* =====================================================================
+    9. PÀGINA: WORK
+   ===================================================================== */
+
+
+
+
+
+/* =====================================================================
+    . PÀGINA: 404
+   ===================================================================== */
+
+.page-404 {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 80px 0;
+  gap: 8px;
+}
+
+.page-404 h1 {
+  font-family: 'General Sans Variable';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.20;
+  margin: 0px
+}
+
+.page-404 h2 {
+  font-family: 'Sentient Variable Italic';
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 250;
+  color: var(--text);
+  opacity: var(--op-strong);
+  margin: 0px;
+}
+
+.page-404 a {
+  text-decoration: none;
+  color: var(--text);
+  opacity: var(--op-strong);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease, color var(--transition-speed) ease;
+}
+
+.page-404 a:hover {
+  color: var(--text);
+  opacity: var(--op-soft);
+}
+
+.page-404 a:link {
+  color: var(--text);
+}
+
+.page-404 a:visited {
+  color: var(--text);
+}
+
+.page-404 a:active {
+  color: var(--text);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+ 
+    <script>
+        (function () {
+            var hour = new Date().toLocaleString('en-US', {
+                timeZone: 'Europe/Madrid',
+                hour: 'numeric',
+                hour12: false
+            });
+            hour = parseInt(hour, 10);
+
+            var THEMES = [
+                { from: 1, to: 8, bg: '#3C2C23', text: '#EAE5DD' },
+                { from: 8, to: 14, bg: '#EAE5DD', text: '#612705' },
+                { from: 14, to: 19, bg: '#EAE5DD', text: '#3C2C23' },
+                { from: 19, to: 24, bg: '#3C2C23', text: '#F6ECBD' },
+                { from: 0, to: 1, bg: '#3C2C23', text: '#F6ECBD' }
+            ];
+
+            var theme = THEMES.find(function (t) {
+                return hour >= t.from && hour < t.to;
+            }) || THEMES[2];
+
+            document.documentElement.style.setProperty('--bg', theme.bg);
+            document.documentElement.style.setProperty('--text', theme.text);
+        })();
+    </script>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- DESCRIPCIÓ PROJECTE (120–160 caràcters): què és, quin problema resol i rol com a dissenyadora -->
+    <title>Arxiu de Somnis — Adriana Yue</title>
+    <meta name="description" content="AAAA"> <!-- DESCRIPCIÓ -->
+    <link rel="canonical" href="https://adrianayue.com/work/arxiudesomnis/">
+ 
+    <meta property="og:title" content="Arxiu de Somnis — Adriana Yue">
+    <meta property="og:description" content="AAAA"> <!-- DESCRIPCIÓ -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://adrianayue.com/work/arxiudesomnis/">
+    <meta property="og:image" content="https://adrianayue.com/assets/work/arxiudesomnis/og-image.png">
+ 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arxiu de Somnis — Adriana Yue">
+    <meta name="twitter:description" content="AAAA"> <!-- DESCRIPCIÓ -->
+    <meta name="twitter:image" content="https://adrianayue.com/assets/work/arxiudesomnis/og-image.png">
+ 
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+ 
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="no-scroll">
+    <header>
+        <div class="header-bar">
+            <div class="hide-mobile">
+                <a class="logo" href="/">Adriana Yue</a>
+            </div>
+
+            <nav>
+                <a href="/about/">about</a>
+                <span class="hide-mobile nav-sep">·</span>
+                <a class="hide-desktop hide-tablet logo" href="/">Adriana Yue</a>
+                <a href="/work/">work</a>
+            </nav>
+
+            <div class="hide-mobile location">
+                <span id="clock">--:--:--</span>
+                <strong>Barcelona</strong>
+            </div>
+        </div>
+    </header>
+
+
+</body>
