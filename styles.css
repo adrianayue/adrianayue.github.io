@@ -330,7 +330,8 @@ header .logo a:active {
 
 /* ========== MAIN ========== */
 main.page-home,
-main.page-about {
+main.page-about,
+main.page-work {
   height: 100%;
   padding: 96px 0px 20px 0px;
 }
@@ -477,7 +478,6 @@ footer {
    ===================================================================== */
 
 main.page-about {
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 24px;
@@ -762,32 +762,10 @@ main.page-about {
     8. PÀGINA: WORK
    ===================================================================== */
 
-.p-work-bg-right {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 49.9vw;
-  background-color: var(--text);
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.1;
-}
-
-/* PENSAR SI FER MEITAT O NO, I PENSAR PERCENTATGE D'OPACITAT ETC*/
-
-.p-work-bg-right::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.1;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-}
-
-.page-work {
-  width: 100%;
-  min-height: 100svh;
+main.page-work {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 24px;
 }
 
 .p-work-grid {
@@ -795,7 +773,7 @@ main.page-about {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  height: 100svh;
+  height: 100%;
 }
 
 .p-work-grid-area {
@@ -804,7 +782,7 @@ main.page-about {
   justify-content: center;
   position: relative;
   width: 50%;
-  height: 100svh;
+  height: 100%;
   background: var(--bg);
 }
 
